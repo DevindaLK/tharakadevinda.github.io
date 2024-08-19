@@ -1,6 +1,12 @@
-
-title: tharakadevinda.github.io
+title: Tharaka Devinda
 logo: /assets/img/headshot_circle.png
-#description: text below image
+description: "A modern professional profile of Tharaka Devinda"
 show_downloads: true
 theme: jekyll-theme-minimal
+
+# Add custom settings
+author: Tharaka Devinda
+email: your.email@example.com
+linkedin: https://www.linkedin.com/in/tharakadevinda/
+github: https://github.com/tharakadevinda
+twitter: https://twitter.com/tharakadevinda

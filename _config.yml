@@ -10,3 +10,9 @@ email: your.email@example.com
 linkedin: https://www.linkedin.com/in/tharakadevinda/
 github: https://github.com/tharakadevinda
 twitter: https://twitter.com/tharakadevinda
+
+# Theme customizations
+minimal:
+  accent_color: "#083c74" # Your preferred accent color
+  base_color: "#f0f0f0" # Background color
+  text_color: "#333" # Text color

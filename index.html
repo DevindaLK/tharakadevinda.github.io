@@ -366,6 +366,64 @@ h1, h2, h3, h4, p {
         padding: 0;
     }
 }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
 
     </style>
     <script>
@@ -559,7 +617,24 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
             </div>
         </div>
     </section>
-
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-RwuDGwus_PqhdM9o8ZqMjjNm5kZtHGMAw9hOgp0SRlsBkwf58qcHUEk648Ji2Io6qhNwMeM8KIiYZxKAZT5rckMdxDZ6YdWdg0xlbPV7-Ty467V2byr21Z4oZvePPOTc5NYFE-occ6H_xtFVm6HvGVbeHZVahxzc72WZCqpcPZPCkqOt-Vilg3pkKDA/s16000/ylp.JPG" alt="Project 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="path/to/image2.jpg" alt="Project 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="path/to/image3.jpg" alt="Project 3">
+                </div>
+                <!-- Add more gallery items as needed -->
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">

@@ -8,6 +8,82 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+    background-color: #111; /* Dark background for contrast */
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-text {
+    max-width: 50%;
+}
+
+.home-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.home-text .btn {
+    padding: 10px 20px;
+    background-color: #00BFFF; /* Accent color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-text .btn:hover {
+    background-color: #0099CC; /* Darker shade on hover */
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text {
+        max-width: 100%;
+    }
+
+    .home-image img {
+        margin-top: 20px;
+        width: 80%;
+    }
+}
+
         /* General Styles */
 body, html {
     margin: 0;

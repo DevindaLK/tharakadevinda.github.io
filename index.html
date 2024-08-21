@@ -6,150 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tharaka Devinda - Software Developer</title>
     <style>
+        /* General styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #333;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .header {
-            background: #083c74;
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
             color: #fff;
-            padding: 20px 0;
-            text-align: center;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        a {
+            color: #00BFFF;
+            text-decoration: none;
         }
 
-        .section {
-            background: #fff;
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #111;
+            position: fixed;
+            height: 100%;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
         }
 
-        .section h2 {
-            color: #083c74;
-            border-bottom: 2px solid #083c74;
-            padding-bottom: 10px;
+        .sidebar img {
+            width: 100px;
+            border-radius: 50%;
             margin-bottom: 20px;
         }
 
-        .section p {
+        .sidebar h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #00BFFF;
+        }
+
+        .sidebar p {
+            color: #777;
+            font-size: 14px;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+
+        .sidebar nav a {
+            display: block;
+            padding: 10px 0;
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        .sidebar nav a:hover {
+            color: #00BFFF;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .main-content h2 {
+            font-size: 36px;
+            margin: 0;
+            color: #00BFFF;
+        }
+
+        .main-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            line-height: 1.6;
+        }
+
+        .main-content .projects {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            width: 30%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .project-card h4 {
+            font-size: 20px;
             margin: 0 0 10px;
         }
 
-        .section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .section ul li {
-            margin-bottom: 10px;
-        }
-
-        .skills ul {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .skills ul li {
-            width: 48%;
-            margin-right: 4%;
-            background: #083c74;
-            color: #fff;
-            padding: 10px;
-            margin-bottom: 10px;
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #00BFFF;
             border-radius: 5px;
-        }
-
-        .skills ul li:nth-child(2n) {
-            margin-right: 0;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #083c74;
             color: #fff;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            background: #0088cc;
+        }
+
+        .social-icons {
             margin-top: 20px;
+        }
+
+        .social-icons a {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #00BFFF;
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
+    <div class="sidebar">
+        <img src="/assets/img/headshot_circle.png" alt="Profile Picture">
         <h1>Tharaka Devinda</h1>
         <p>Software Developer</p>
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Education</a>
+            <a href="#">Skills</a>
+            <a href="#">Experience</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
     </div>
 
-    <div class="container">
-        <div class="section">
-            <h2>Address</h2>
-            <p>NO:286/2 Pitipana north, Hettigoda, Homagama, 10200, Sri Lanka</p>
-        </div>
+    <div class="main-content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Experienced Software Developer with a passion for building innovative solutions. Skilled in full-stack development, database management, and UI/UX design.</p>
+        </section>
 
-        <div class="section">
-            <h2>Profile</h2>
-            <p>Experienced Software Developer with a strong background in full-stack development, database management, and UI/UX design. Passionate about building efficient systems and creating user-friendly applications.</p>
-        </div>
-
-        <div class="section">
-            <h2>Work & Experience</h2>
-            <h3>Software Programmer at Data Management Systems (Pvt) Ltd - Software Division (Full-time)</h3>
+        <section id="experience">
+            <h3>Work Experience</h3>
+            <p><strong>Software Programmer at Data Management Systems (Pvt) Ltd - Software Division</strong></p>
             <ul>
                 <li>Handled database operations for the Singer Sri Lanka web-based system.</li>
-                <li>Developed early childhood web-based system using Angular.</li>
+                <li>Developed an early childhood web-based system using Angular.</li>
                 <li>Contributed to the development of the Singer Sri Lanka ERP system using Angular.</li>
                 <li>Involved in the development of the Army Payroll Management System (Java application).</li>
                 <li>Involved in UI/UX design for a tax system.</li>
             </ul>
 
-            <h3>Full-stack Software Developer at BAM Holdings Ltd (Full-time)</h3>
+            <p><strong>Full-stack Software Developer at BAM Holdings Ltd</strong></p>
             <ul>
-                <li>Developed BAM ERP 2.0 as a full-stack developer, customized for a garment factory environment.</li>
-                <li>Developed Hotel management system with booking, room management, and invoicing modules.</li>
+                <li>Developed BAM ERP 2.0 customized for garment factories.</li>
+                <li>Developed a Hotel management system with booking and invoicing modules.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="section">
-            <h2>Education</h2>
-            <h3>University of Vocational Technology, Rathmalana, Sri Lanka</h3>
-            <p>Software Technology (01/2021 – present)</p>
-            <h3>Vocational Training Authority</h3>
-            <p>ICT NVQ Level-05 (National Diploma)<br>ICT NVQ Level-04<br>ICT NVQ Level-03</p>
-        </div>
+        <section id="projects">
+            <h3>Projects</h3>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="project-image1.jpg" alt="Project Image">
+                    <h4>Vehicle Parking Manager</h4>
+                    <p>A comprehensive vehicle management system.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project-image2.jpg" alt="Project Image">
+                    <h4>Phone Finder</h4>
+                    <p>An app that helps locate lost devices.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="project-image3.jpg" alt="Project Image">
+                    <h4>EduBuddy</h4>
+                    <p>A learning management system for schools.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="section skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Java, JavaScript, PHP, C#</li>
-                <li>Angular, Laravel</li>
-                <li>MySQL, Database Operations</li>
-                <li>Full-stack Development</li>
-                <li>HTML/CSS, JSON, REST APIs</li>
-                <li>Visual Studio, VS Code, Git</li>
-                <li>Windows OS</li>
-                <li>Data Management, Version Control, Software Documentation</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 Tharaka Devinda - Software Developer</p>
+        <section class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </section>
     </div>
 </body>
 

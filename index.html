@@ -7,10 +7,8 @@
     <title>Tharaka Devinda - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-</head>
-<style>
-/* General Styles */
+    <style>
+        /* General Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -29,22 +27,6 @@ h1, h2, h3, h4, p {
     padding: 0;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
 /* Navbar */
 .navbar {
     position: fixed;
@@ -53,7 +35,40 @@ h1, h2, h3, h4, p {
     padding: 10px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    animation: slideIn 1s ease-in-out;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    color: #00BFFF;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover, .navbar ul li a.current {
+    background-color: #00BFFF;
+    color: #fff;
 }
 
 /* Home Section */
@@ -64,19 +79,16 @@ h1, h2, h3, h4, p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 .home h2 {
     font-size: 48px;
     margin-bottom: 20px;
-    animation: slideIn 2s ease-in-out;
 }
 
 .home p {
     font-size: 24px;
     margin-bottom: 30px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .home .btn {
@@ -86,7 +98,6 @@ h1, h2, h3, h4, p {
     border-radius: 5px;
     font-size: 18px;
     transition: background-color 0.3s;
-    animation: pulse 2s infinite;
 }
 
 .home .btn:hover {
@@ -100,7 +111,6 @@ h1, h2, h3, h4, p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 .about .about-content {
@@ -111,18 +121,15 @@ h1, h2, h3, h4, p {
 .about h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .about p {
     font-size: 18px;
     line-height: 1.6;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .about .about-image {
     flex: 1;
-    animation: fadeIn 2.5s ease-in-out;
 }
 
 .about img {
@@ -135,7 +142,6 @@ h1, h2, h3, h4, p {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 .skills h2 {
@@ -157,7 +163,6 @@ h1, h2, h3, h4, p {
     flex: 1 1 200px;
     text-align: center;
     transition: transform 0.3s;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .skill-card:hover {
@@ -180,7 +185,6 @@ h1, h2, h3, h4, p {
     padding: 80px 20px;
     background-color: #1a1a1a;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 .experience h2, .education h2 {
@@ -195,7 +199,6 @@ h1, h2, h3, h4, p {
 
 .timeline-item {
     margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .timeline-item h3 {
@@ -226,7 +229,6 @@ h1, h2, h3, h4, p {
     padding: 80px 20px;
     background-color: #111;
     text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 .contact h2 {
@@ -241,7 +243,6 @@ h1, h2, h3, h4, p {
 .contact-info p {
     font-size: 18px;
     margin-bottom: 10px;
-    animation: fadeIn 2s ease-in-out;
 }
 
 .social-icons a {
@@ -249,7 +250,6 @@ h1, h2, h3, h4, p {
     color: #00BFFF;
     margin: 0 10px;
     transition: color 0.3s;
-    animation: fadeIn 2.5s ease-in-out;
 }
 
 .social-icons a:hover {
@@ -291,10 +291,7 @@ h1, h2, h3, h4, p {
     }
 }
 
-
-</style>
-
-<body>
+    </style>
     <script>
         // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -314,6 +311,9 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
 });
 
     </script>
+</head>
+
+<body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="container">
@@ -401,29 +401,8 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
                     <h3>Full-stack Software Developer</h3>
                     <h4>BAM Holdings Ltd (Full-time)</h4>
                     <ul>
-                        <h2>Developed BAM ERP 2.0 as a full-stack developer</h2>
-
-                        <p><strong>Customized ERP system for garment factory environment</strong></p>
-                        
-                        <ul>
-                          <li><strong>Modules:</strong>
-                            <ul>
-                              <li>Garment data management</li>
-                              <li>Order book organization</li>
-                              <li>Stores management</li>
-                              <li>Inventory management</li>
-                              <li>Invoicing</li>
-                            </ul>
-                          </li>
-                        </ul>
-                        
-                        <p><strong>Technical details</strong></p>
-                        
-                        <ul>
-                          <li><strong>Framework:</strong> Laravel</li>
-                          <li><strong>Database server:</strong> MySQL</li>
-                        </ul>
-                        
+                        <li>Developed BAM ERP 2.0 customized for garment factories.</li>
+                        <li>Developed a Hotel management system with booking and invoicing modules.</li>
                     </ul>
                 </div>
             </div>

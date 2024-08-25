@@ -466,6 +466,7 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
     navbar.classList.toggle('active');
 });
 
+
     </script>
 </head>
 
@@ -491,10 +492,14 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
     </nav>
     
     <!-- Home Section -->
+    <section id="bg">
     <section id="home" class="home">
         <div class="container">
             <div class="home-content">
                 <div class="home-text">
+                    
+                      
+                   
                     <h2>I'm Tharaka Devinda</h2>
                     <p>Full-stack Software Developer</p>
                     <a href="#contact" class="btn">Contact Me</a>
@@ -506,7 +511,22 @@ document.querySelector('.navbar .logo').addEventListener('click', () => {
             </div>
         </div>
     </section>
-    
+   
+    <script>
+        var blendAmount = 70;
+var delay = -10;
+var windowWidth = window.innerWidth;
+var bg = document.getElementById("bg");
+
+document.onmousemove = function(e){
+	mouseX = Math.round(e.pageX / windowWidth * 100 - delay);
+	
+	col1 = mouseX - blendAmount;
+	col2 = mouseX + blendAmount;
+	
+	bg.style.background = "linear-gradient(to right, #156785 "+ col1 +"%, #fad0c4 "+ col2 +"%)";
+}
+    </script>
 
     <!-- About Section -->
     <section id="about" class="about">
